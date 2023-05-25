@@ -5,15 +5,16 @@
   "main": "/build/app.js",
   "scripts": {
     "build": "tsc",
-    "check-types": "tsc --noEmit",
-    "lint": "eslint --ignore-path .gitignore .",
-    "prettier": "prettier \"**/*.+(ts|tsx|json)\" --ignore-path .gitignore",
-    "format": "npm run prettier -- --write",
+    "build:watch": "tsc --watch",
     "check-format": "npm run prettier -- --list-different",
+    "check-types": "tsc --noEmit",
+    "format": "npm run prettier -- --write",
+    "lint": "eslint --ignore-path .gitignore .",
+    "prepare": "husky install",
+    "prettier": "prettier \"**/*.+(ts|tsx|json)\" --ignore-path .gitignore",
     "start": "http-server",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "validate": "npm-run-all check-format check-types lint build",
-    "prepare": "husky install"
+    "validate": "npm-run-all check-format check-types lint build"
   },
   "author": "",
   "license": "ISC",

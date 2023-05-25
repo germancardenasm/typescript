@@ -10,3 +10,12 @@ const app = (a: number, b: number): number => {
 };
 
 app(11, 2);
+
+const onClick = (): string => {
+  console.log('click');
+  return 'yo';
+};
+const button = document.querySelector('button');
+button?.addEventListener('click', onClick);
+
+export {};
